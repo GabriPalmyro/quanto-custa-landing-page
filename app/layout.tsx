@@ -1,31 +1,57 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import { Analytics } from '@vercel/analytics/next';
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'QuantoCusta? - Descubra o valor real do seu dinheiro',
-  description: 'O app que te ajuda a ter consciência financeira e gastar com inteligência. Saiba para onde vai cada centavo.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://quantocusta.app'),
+  title: {
+    default: 'Quanto Custa? - O valor do seu tempo',
+    template: '%s | Quanto Custa?'
+  },
+  description: 'Descubra o verdadeiro custo das suas compras em horas de trabalho. O Quanto Custa? ajuda você a ter mais consciência financeira e atingir seus objetivos.',
+  keywords: ['finanças', 'educação financeira', 'valor hora', 'controle de gastos', 'economia', 'planejamento financeiro', 'app de finanças'],
+  authors: [{ name: 'Equipe Quanto Custa' }],
+  creator: 'Quanto Custa',
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://quantocusta.app',
+    title: 'Quanto Custa? - Descubra o valor do seu tempo',
+    description: 'Transforme seus gastos em horas de trabalho e tome decisões financeiras mais inteligentes.',
+    siteName: 'Quanto Custa?',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Quanto Custa? - O valor do seu tempo',
+    description: 'Pare de gastar dinheiro sem pensar. Comece a entender o custo em tempo de vida.',
+    creator: '@quantocusta',
+  },
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    apple: [
+      { url: '/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' },
+      { url: '/apple-icon-60x60.png', sizes: '60x60', type: 'image/png' },
+      { url: '/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' },
+      { url: '/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' },
+      { url: '/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' },
+      { url: '/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' },
+      { url: '/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' },
+      { url: '/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
+      { url: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 

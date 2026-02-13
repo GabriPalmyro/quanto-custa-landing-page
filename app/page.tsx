@@ -11,24 +11,52 @@ function GooglePlayIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Quanto Custa?',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'iOS, Android',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'BRL',
+    },
+    description:
+      'O app que te ajuda a ter consciência financeira e gastar com inteligência. Saiba para onde vai cada centavo.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '10000',
+    },
+    downloadUrl:
+      'https://apps.apple.com/br/app/quantocusta-economia/id6757590050',
+    featureList: 'Renda por hora, Cálculo de tempo de trabalho, Histórico de gastos',
+  }
+
   return (
     <div className="min-h-screen bg-white font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative w-10 h-10 bg-gradient-to-br from-[#00FF55] to-[#00CC44] rounded-2xl flex items-center justify-center">
-              <DollarSign className="w-6 h-6 text-[#013327]" />
-            </div>
+            <img src="/apple-icon.png" alt="Quanto Custa Logo" className="w-10 h-10 rounded-2xl shadow-sm" />
             <span className="text-2xl font-black">
               <span className="text-[#00FF55]">Quanto</span>
               <span className="text-[#013327]">Custa?</span>
             </span>
           </div>
           <Button
+            asChild
             className="bg-gradient-to-r from-[#00FF55] to-[#00CC44] text-[#013327] font-bold hover:shadow-lg hover:shadow-[#00FF55]/50 transition-all duration-300"
           >
-            Baixar App
+            <a href="https://apps.apple.com/br/app/quantocusta-economia/id6757590050" target="_blank" rel="noopener noreferrer">
+              Baixar App
+            </a>
           </Button>
         </nav>
       </header>
@@ -105,9 +133,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto max-w-4xl text-center space-y-6">
           <div className="inline-block">
-            <div className="w-20 h-20 bg-gradient-to-br from-[#00FF55] to-[#00CC44] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#00FF55]/50">
-              <DollarSign className="w-10 h-10 text-[#013327]" />
-            </div>
+            <img src="/apple-icon.png" alt="Quanto Custa Logo" className="w-20 h-20 rounded-3xl mx-auto mb-6 shadow-lg shadow-[#00FF55]/50" />
           </div>
           <h2 className="text-5xl font-black text-[#013327]">
             Você sabe quanto custa a sua hora?
@@ -304,9 +330,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#00FF55] to-[#00CC44] rounded-lg flex items-center justify-center">
-                <DollarSign className="w-5 h-5 text-[#013327]" />
-              </div>
+              <img src="/apple-icon.png" alt="Quanto Custa Logo" className="w-8 h-8 rounded-lg" />
               <span className="text-xl font-black">
                 <span className="text-[#00FF55]">Quanto</span>
                 <span className="text-[#013327]">Custa?</span>
