@@ -54,7 +54,8 @@ export default function Home() {
             asChild
             className="bg-gradient-to-r from-[#00FF55] to-[#00CC44] text-[#013327] font-bold hover:shadow-lg hover:shadow-[#00FF55]/50 transition-all duration-300"
           >
-            <a href="https://apps.apple.com/br/app/quantocusta-economia/id6757590050" target="_blank" rel="noopener noreferrer">
+            <a href="https://apps.apple.com/br/app/quantocusta-economia/id6757590050" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <img src="/apple-icon.png" alt="Logo" className="w-6 h-6 rounded-md" />
               Baixar App
             </a>
           </Button>
@@ -81,7 +82,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-[#00FF55] to-[#00CC44] text-[#013327] font-black text-lg px-10 py-8 hover:scale-105 hover:shadow-2xl hover:shadow-[#00FF55]/60 transition-all duration-300 flex items-center gap-4 group"
                 >
                   <a href="https://apps.apple.com/br/app/quantocusta-economia/id6757590050" target="_blank" rel="noopener noreferrer">
-                    <Apple className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                    <Apple className="w-8 h-8 group-hover:scale-110 transition-transform fill-black text-black" />
                     <div className="flex flex-col items-start">
                       <span className="text-xs font-bold uppercase tracking-wide">Baixar na</span>
                       <span className="text-xl font-black">App Store</span>
@@ -303,7 +304,7 @@ export default function Home() {
               className="bg-white text-[#013327] font-black text-lg px-10 py-8 hover:scale-105 hover:shadow-2xl hover:bg-[#00FF55] transition-all duration-300 flex items-center gap-4 group border-2 border-[#00FF55]"
             >
               <a href="https://apps.apple.com/br/app/quantocusta-economia/id6757590050" target="_blank" rel="noopener noreferrer">
-                <Apple className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                <Apple className="w-8 h-8 group-hover:scale-110 transition-transform fill-black text-black" />
                 <div className="flex flex-col items-start">
                   <span className="text-xs font-bold uppercase tracking-wide">Baixar na</span>
                   <span className="text-xl font-black">App Store</span>
