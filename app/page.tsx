@@ -90,15 +90,17 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
-                  className="bg-gray-200 text-gray-500 font-bold text-lg px-10 py-8 cursor-not-allowed flex items-center gap-4 group"
-                  disabled
+                  className="bg-gradient-to-r from-[#00FF55] to-[#00CC44] text-[#013327] font-black text-lg px-10 py-8 hover:scale-105 hover:shadow-2xl hover:shadow-[#00FF55]/60 transition-all duration-300 flex items-center gap-4 group"
                 >
-                  <GooglePlayIcon className="w-8 h-8 opacity-50" />
-                  <div className="flex flex-col items-start">
-                    <span className="text-xs font-bold uppercase tracking-wide">Em breve no</span>
-                    <span className="text-xl font-black">Google Play</span>
-                  </div>
+                  <a href="https://play.google.com/store/apps/details?id=com.lucasqueiroga.quantocusta&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+                    <GooglePlayIcon className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                    <div className="flex flex-col items-start">
+                      <span className="text-xs font-bold uppercase tracking-wide">Baixar no</span>
+                      <span className="text-xl font-black">Google Play</span>
+                    </div>
+                  </a>
                 </Button>
               </div>
               <div className="flex items-center gap-8 pt-4">
@@ -312,15 +314,17 @@ export default function Home() {
               </a>
             </Button>
             <Button
+              asChild
               size="lg"
-              className="bg-gray-200 text-gray-500 font-bold text-lg px-10 py-8 cursor-not-allowed flex items-center gap-4 group border-2 border-gray-200"
-              disabled
+              className="bg-white text-[#013327] font-black text-lg px-10 py-8 hover:scale-105 hover:shadow-2xl hover:bg-[#00FF55] transition-all duration-300 flex items-center gap-4 group border-2 border-[#00FF55]"
             >
-              <GooglePlayIcon className="w-8 h-8 opacity-50" />
-              <div className="flex flex-col items-start">
-                <span className="text-xs font-bold uppercase tracking-wide">Em breve no</span>
-                <span className="text-xl font-black">Google Play</span>
-              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.lucasqueiroga.quantocusta&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+                <GooglePlayIcon className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                <div className="flex flex-col items-start">
+                  <span className="text-xs font-bold uppercase tracking-wide">Baixar no</span>
+                  <span className="text-xl font-black">Google Play</span>
+                </div>
+              </a>
             </Button>
           </div>
         </div>
